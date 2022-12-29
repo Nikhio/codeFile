@@ -1,0 +1,15 @@
+//Minimum Absolute Difference in BST
+class Solution {
+    int min = Integer.MAX_VALUE;
+    TreeNode lastNode = null;
+    
+    public int getMinimumDifference(TreeNode root) {
+        if(root == null) return min;
+        min = getMinimumDifference(root.left);
+        if(lastNode != null){
+            min = Math.min(min, Math.abs(root.val - lastNode.val));
+        }
+        lastNode = root;
+        return getMinimumDifference(root.right);
+    }
+}

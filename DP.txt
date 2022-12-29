@@ -1,0 +1,7 @@
+------------DP------------
+1)LIS---Important fundamental
+2)LCS---Important fundamental
+3)COIN CHANGE
+4)Edit distance
+5)robber house
+6)Matrix chain Multiplication

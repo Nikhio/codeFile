@@ -1,0 +1,57 @@
+class BinaryTreeNode{
+int data;
+BinaryTreeNode left;
+BinaryTreeNode right;
+BinaryTreeNode(int data){
+this.data=data;
+left=null;
+right=null;
+}
+public static BinaryTreeNode takeInput(){
+if(root==null)return null;
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter root data:");
+int rootData=sc.nextInt();
+if(rootData==-1){
+return null;
+}
+BinaryTreeNode root=new BinaryTreeNode(rootData);
+root.left=takeInput();
+root.right=takeInput();
+return root;
+}
+public static BinaryTreeNode takeInputIteratively(){
+Queue<BinaryTreeNode> pendingNode=new LinkedList<>();
+Scanner sc=new Scanner(System.in);
+int rootData=sc.nextInt();
+if(root.data==-1)return null;
+BinaryTreeNode root=new BinaryTreeNode(rootData);
+pending.enqueue(root);
+while(!pending.isEmpty()){
+BinaryTreeNode front=pending.dequeue();
+System.out.print("Enter the left"+front.data);
+int left=sc.nextInt();
+if(left!=-1){
+BinaryTreeNode child1=new BinaryTreeNode(left);
+front.left=child1;
+pending.enqueue();
+}
+System.out.print("Enter the right"+front.data);
+int right=sc.nextInt();
+if(right!=-1){
+BinaryTreeNode child2=new BinaryTreeNode(right);
+front.right=child2;
+pending.enqueue();
+}
+
+}
+return root;
+}
+public static void printLevelWise(BinaryTreeNode root){
+if(root==null)return;
+Queue<BinaryTreeNode> pendingNodes=new LinkedList<>();
+while(!pending.isEmpty()){
+BinaryTreeNode 
+}
+}
+}

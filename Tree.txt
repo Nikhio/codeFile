@@ -1,0 +1,17 @@
+public static void printPath(TreeNode root,ArrayList<String> list){
+String str="";
+if(root.left==null && root.right==null){
+str=str+root.data;
+return;
+}
+str=str+root.data;
+String left=str+printPath(root.left,list,str);
+System.out.print(left);
+String right=str+printPath(root.right,list,str);
+System.out.print(right);
+}
+public static void main(String[] args){
+List<String> res=new ArrayList<>();
+String str="";
+printPath(root,res);
+}

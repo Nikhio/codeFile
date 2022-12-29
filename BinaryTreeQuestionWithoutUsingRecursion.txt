@@ -1,0 +1,27 @@
+public boolean isPresent(TreeNode root,int x){
+if(root==null)return false;
+Queue<TreeNode> queue=new LinkedList<>();
+queue.add(root);
+while(!queue.isEmpty()){
+TreeNode front=queue.remove();
+if(front.data==x)return true;
+else{
+if(front.left!=null)queue.add(front.left);
+if(front.right!=null)queue.add(front.right);
+}
+}
+return false;
+}
+public void printAllNodesWithoutSibling(TreeNode root){
+if(root==null)return;
+Queue<TreeNode> queue=new LinkedList<>();
+queue.add(root);
+while(!queue.isEmpty()){
+TreeNode front=queue.remove();
+if(front.left==null && front.right==null)System.out.print(front.val+" ");
+else{
+if(front.left!=null)queue.add(front.left);
+if(front.right!=null)queue.add(front.right);
+}
+}
+}
